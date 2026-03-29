@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="p:domain_verify" content="563577cce4dfedb6c6d88bb1b6be7345"/>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>menu</title>
@@ -29,6 +28,9 @@
       padding: 6px 10px;
       box-shadow: 0 4px 18px rgba(0,0,0,0.13), 0 1px 4px rgba(0,0,0,0.08);
       border: 1.5px solid rgba(0,0,0,0.07);
+      width: 62%;
+      min-width: 280px;
+      justify-content: space-around;
     }
 
     .nav-item {
@@ -36,7 +38,7 @@
       font-size: 15px;
       font-weight: 400;
       color: #5a5855;
-      padding: 8px 22px;
+      padding: 8px 0;
       border-radius: 999px;
       cursor: pointer;
       border: none;
@@ -46,16 +48,19 @@
       letter-spacing: 0.01em;
       white-space: nowrap;
       outline: none;
+      flex: 1;
+      text-align: center;
+      text-transform: lowercase;
     }
 
     .nav-item:hover:not(.active) {
       color: #2a2926;
-      background: rgba(0,0,0,0.055);
+      background: rgba(0,0,0,0.045);
     }
 
     .nav-item.active {
       font-weight: 500;
-      color: #1a1917;
+      color: #2a2926;
     }
 
     .nav-item.active::after {
@@ -63,13 +68,13 @@
       position: absolute;
       inset: 0;
       border-radius: 999px;
-      border: 2px solid #1a1917;
+      border: 1.5px solid #9e9b97;
       pointer-events: none;
     }
 
     .page-content {
-      width: 100%;
-      max-width: 520px;
+      width: 75%;
+      min-width: 320px;
       background: #F7F6F2;
       border-radius: 16px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.09);
@@ -85,6 +90,7 @@
       font-size: 20px;
       font-weight: 500;
       color: #1a1917;
+      text-transform: lowercase;
     }
 
     .page-body {
@@ -132,9 +138,9 @@
 </head>
 <body>
   <nav class="nav-bar">
-    <button class="nav-item" data-page="photography" onclick="switchPage('photography')">Photography</button>
-    <button class="nav-item active" data-page="home" onclick="switchPage('home')">Home</button>
-    <button class="nav-item" data-page="projects" onclick="switchPage('projects')">Projects</button>
+    <button class="nav-item" data-page="photography" onclick="switchPage('photography')">photography</button>
+    <button class="nav-item active" data-page="home" onclick="switchPage('home')">home</button>
+    <button class="nav-item" data-page="projects" onclick="switchPage('projects')">projects</button>
   </nav>
 
   <div class="page-content" id="page-content"></div>
@@ -142,18 +148,18 @@
   <script>
     const pages = {
       home: {
-        title: 'hey!',
-        body: 'blah 1',
+        title: 'welcome',
+        body: '',
         extra: null
       },
       photography: {
         title: 'photography',
-        body: 'blah 2',
+        body: '',
         extra: 'gallery'
       },
       projects: {
         title: 'projects',
-        body: 'blah 3',
+        body: '',
         extra: 'grid'
       }
     };
@@ -166,13 +172,13 @@
       const content = document.getElementById('page-content');
       let extra = '';
       if (p.extra === 'gallery') {
-        extra = `<div class="placeholder-img"><iframe src="https://petracoding.github.io/pinterest/board.html?link=secondsergio/hawaii/&hideHeader=1&hideFooter=0&transparent=0"></iframe></div>`;
+        extra = `<div class="placeholder-img"><iframe src="https://petracoding.github.io/pinterest/board.html?link=secondsergio/hawaii/&hideHeader=0&hideFooter=1&transparent=1"></iframe></div>`;
       } else if (p.extra === 'grid') {
         extra = `<div class="grid2">
-          <div class="placeholder-sm"><span>project A</span></div>
-          <div class="placeholder-sm"><span>project B</span></div>
-          <div class="placeholder-sm"><span>project C</span></div>
-          <div class="placeholder-sm"><span>project D</span></div>
+          <div class="placeholder-sm"><span>project a</span></div>
+          <div class="placeholder-sm"><span>project b</span></div>
+          <div class="placeholder-sm"><span>project c</span></div>
+          <div class="placeholder-sm"><span>project d</span></div>
         </div>`;
       }
       content.innerHTML = `
