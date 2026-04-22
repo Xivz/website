@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>sergio flores — about</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Mono:wght@400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #f5ede0; --cream-dark: #ede3d2; --ink: #1a1208; --ink-mid: #3d2e18;
+      --muted: #8a7560; --border: #1a1208; --shadow: 3px 3px 0 #1a1208; --shadow-lg: 4px 4px 0 #1a1208;
+      --yellow: #f5c842; --teal: #7dcfbf;
+      --radius: 14px; --radius-sm: 8px;
+      --font-body: 'Bitter', Georgia, serif; --font-display: 'Fraunces', Georgia, serif; --font-mono: 'DM Mono', monospace;
+      --max: 780px; --pad: 24px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--cream); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+    .topbar { position: sticky; top: 0; z-index: 100; background: var(--cream); border-bottom: 2px solid var(--border); padding: 10px var(--pad); display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .topbar-name { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; font-style: italic; color: var(--ink); text-decoration: none; }
+    .topbar-nav { display: flex; gap: 6px; align-items: center; }
+    .nav-pill { font-family: var(--font-body); font-size: 0.72rem; font-weight: 500; color: var(--ink); text-decoration: none; border: 2px solid var(--border); border-radius: 999px; padding: 4px 14px; background: transparent; transition: background 0.15s, box-shadow 0.15s, transform 0.1s; white-space: nowrap; }
+    .nav-pill:hover { background: var(--yellow); box-shadow: var(--shadow); transform: translateY(-1px); }
+    .nav-pill.active { background: var(--ink); color: var(--cream); }
+
+    main { max-width: var(--max); margin: 0 auto; padding: 56px var(--pad) 80px; }
+    .page-heading { font-family: var(--font-display); font-size: clamp(2rem, 6vw, 3rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 36px; }
+
+    .about-card { background: #fff9f0; border: 2px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-lg); padding: 28px 28px; margin-bottom: 20px; }
+    .about-card h2 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; margin-bottom: 12px; }
+    .about-card p { font-size: 0.88rem; color: #4a3c28; line-height: 1.75; margin-bottom: 12px; }
+    .about-card p:last-child { margin-bottom: 0; }
+
+    .contact-card { background: var(--teal); border: 2px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-lg); padding: 28px; text-align: center; }
+    .contact-card h2 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
+    .contact-card p { font-size: 0.85rem; color: var(--ink-mid); margin-bottom: 20px; }
+    .contact-btn { display: inline-block; background: var(--yellow); border: 2px solid var(--border); border-radius: 999px; padding: 8px 24px; font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; color: var(--ink); text-decoration: none; box-shadow: var(--shadow); transition: transform 0.1s, box-shadow 0.1s; }
+    .contact-btn:hover { transform: translateY(-2px); box-shadow: 5px 5px 0 var(--border); }
+
+    footer { border-top: 2px solid var(--border); text-align: center; padding: 32px var(--pad); font-size: 0.75rem; color: var(--muted); }
+    footer a { color: var(--muted); text-decoration: underline; }
+    @media (max-width: 600px) { .topbar-name { font-size: 0.9rem; } .nav-pill { padding: 3px 10px; font-size: 0.65rem; } .about-card { padding: 20px 18px; } }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <a href="index.html" class="topbar-name">sergio flores</a>
+    <div class="topbar-nav">
+      <a href="index.html" class="nav-pill">portfolio</a>
+      <a href="photography.html" class="nav-pill">photography</a>
+      <a href="about.html" class="nav-pill active">about</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1 class="page-heading">about me</h1>
+
+    <div class="about-card">
+      <h2>who i am</h2>
+      <p>wip</p>
+    </div>
+
+    <div class="about-card">
+      <h2>background</h2>
+      <p>wip</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>get in touch</h2>
+      <p>for questions, collaborations, or just to say hi.</p>
+      <a href="mailto:your@email.com" class="contact-btn">✉ your@email.com</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>· sergio flores ·</p>
+  </footer>
+</body>
+</html>
